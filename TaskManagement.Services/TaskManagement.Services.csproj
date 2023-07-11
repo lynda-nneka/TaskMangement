@@ -11,11 +11,13 @@
     <None Remove="Interfaces\" />
     <None Remove="Infrastructure\" />
     <None Remove="Microsoft.AspNetCore.JsonPatch" />
+    <None Remove="JWT\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Implementations\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Infrastructure\" />
+    <Folder Include="JWT\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TaskManagement.Data\TaskManagement.Data.csproj" />

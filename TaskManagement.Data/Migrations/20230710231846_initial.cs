@@ -34,6 +34,11 @@ namespace TaskManagement.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MiddleName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RecoveryMail = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Active = table.Column<bool>(type: "bit", nullable: false),
                     UserTypeId = table.Column<int>(type: "int", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -177,16 +182,16 @@ namespace TaskManagement.Data.Migrations
                 name: "Tasks",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TaskStatus = table.Column<int>(type: "int", nullable: false),
-                    AssigneeId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    AssigneeId = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     DueTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ReporterId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Priority = table.Column<int>(type: "int", nullable: false),
-                    CreatedAt = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UpdatedAt = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {

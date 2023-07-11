@@ -13,6 +13,7 @@
     <None Remove="Dtos\Requests\" />
     <None Remove="Dtos\Responses\" />
     <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+    <None Remove="Utility\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
@@ -20,6 +21,7 @@
     <Folder Include="Dtos\" />
     <Folder Include="Dtos\Requests\" />
     <Folder Include="Dtos\Responses\" />
+    <Folder Include="Utility\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.0" />

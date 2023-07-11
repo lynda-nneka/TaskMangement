@@ -15,14 +15,20 @@
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
     <None Remove="Implementations\" />
     <None Remove="Interfaces\" />
+    <None Remove="Seeds\" />
+    <None Remove="Microsoft.AspNetCore.Hosting.Server.Abstractions" />
+    <None Remove="Microsoft.AspNetCore.Http.Abstractions" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Context\" />
     <Folder Include="Implementations\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Seeds\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Server.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
   </ItemGroup>
 </Project>

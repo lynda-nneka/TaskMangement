@@ -62,7 +62,7 @@ namespace TaskManagement.Services.Implementations
         }
         public async Task<ItemResponse> DeleteTask(string Id)
         {
-            TaskItem task = await _taskItemManager.GetSingleByAsync(c => c.Id == Id);
+            TaskItem task = await _taskItemManager.GetSingleByAsync(c => c.Id.ToString() == Id);
 
             if (task == null)
                 throw new InvalidOperationException("Item doesnt exist");
@@ -78,7 +78,7 @@ namespace TaskManagement.Services.Implementations
 
         public async Task<RetrieveItemResponse> GetTask(string Id)
         {
-            TaskItem task = await _taskItemManager.GetSingleByAsync(x => x.Id == Id);
+            TaskItem task = await _taskItemManager.GetSingleByAsync(x => x.Id.ToString() == Id);
 
             if (task == null)
                 throw new InvalidOperationException("no task with that Id");
